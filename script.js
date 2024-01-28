@@ -37,8 +37,9 @@ const elements = document.querySelectorAll(".word span");
 let i = 0;
 document.addEventListener("keydown", function (event) {
   if (event.key === randomWord[i]) {
-    elements[i].classList.toggle("c");
+    elements[i].className = "c";
+    i++;
   } else if (event.key != randomWord[i]) {
-    elements[i].classList.toggle("w");
+    elements[i].className = "w";
   }
 });
